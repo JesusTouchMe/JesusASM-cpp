@@ -16,7 +16,7 @@ namespace jasm {
 		virtual ~BaseJmpInstruction() { }
 
 		virtual bool print(std::ostream& out) override {
-			out << Name;
+			out << Name.value;
 
 			if (mLabel != nullptr) {
 				out << std::format(" {}", mLabel->getName());

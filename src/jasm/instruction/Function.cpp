@@ -22,7 +22,7 @@ namespace jasm {
 			out << argumentTypes.back()->getName();
 		}
 
-		out << "):\n.locals" << mLocals;
+		out << "):\n.locals " << mLocals;
 
 		return true;
 	}

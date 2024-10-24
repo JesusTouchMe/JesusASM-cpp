@@ -14,7 +14,7 @@ namespace jasm {
 		virtual ~NoOperandInstruction() { }
 
 		virtual bool print(std::ostream& out) override {
-			out << Name;
+			out << Name.value;
 			return true;
 		}
 	};	

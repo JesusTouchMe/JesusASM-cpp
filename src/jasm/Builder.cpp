@@ -315,7 +315,7 @@ namespace jasm {
 		return insn(new Class(mModuleName, name, "", "", std::move(modifiers), std::move(fields), std::move(methods)));
 	}
 
-	Builder& Builder::function(std::string_view name, FunctionType* type, std::set<Modifier> modifiers, std::uint16_t locals = 0) {
+	Builder& Builder::function(std::string_view name, FunctionType* type, std::set<Modifier> modifiers, std::uint16_t locals) {
 		 return insn(new Function(name, type, std::move(modifiers), locals));
 	}
 

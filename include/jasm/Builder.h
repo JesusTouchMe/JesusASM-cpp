@@ -10,6 +10,7 @@
 
 namespace jasm {
 	class Builder;
+	class AsmBuilderPrinter;
 
 	class ClassBuilder {
 	friend class Builder;
@@ -37,8 +38,8 @@ namespace jasm {
 	};
 
 	class Builder {
+	friend class AsmBuilderPrinter;
 	friend class ClassBuilder;
-	friend class ConstantBuilder;
 	public:
 		Builder(std::string_view moduleName);
 

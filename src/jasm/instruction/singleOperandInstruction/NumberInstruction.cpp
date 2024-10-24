@@ -8,6 +8,7 @@ namespace jasm {
 
 	bool ByteInstruction::print(std::ostream& out) {
 		out << std::format("byte {}", mValue);
+		return true;
 	}
 	
 	ShortInstruction::ShortInstruction(std::uint16_t value)
@@ -15,6 +16,7 @@ namespace jasm {
 
 	bool ShortInstruction::print(std::ostream& out) {
 		out << std::format("short {}", mValue);
+		return true;
 	}
 
 	IntInstruction::IntInstruction(std::uint32_t value)
@@ -22,6 +24,7 @@ namespace jasm {
 
 	bool IntInstruction::print(std::ostream& out) {
 		out << std::format("int {}", mValue);
+		return true;
 	}
 
 	LongInstruction::LongInstruction(std::uint64_t value)
@@ -29,5 +32,6 @@ namespace jasm {
 
 	bool LongInstruction::print(std::ostream& out) {
 		out << std::format("long {}", mValue);
+		return true;
 	}
 }

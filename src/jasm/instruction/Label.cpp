@@ -8,5 +8,6 @@ namespace jasm {
 
 	bool Label::print(std::ostream& out) {
 		out << std::format("{}:", mName);
+		return true;
 	}
 }
