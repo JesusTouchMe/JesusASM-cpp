@@ -1,0 +1,71 @@
+#ifndef JESUSASM_OPCODES_H
+#define JESUSASM_OPCODES_H
+
+namespace jasm {
+	namespace codegen {
+		enum Opcodes {
+			NOP = 0x00,
+			POP = 0x01,
+			DUP = 0x02,
+			LOAD = 0x03,
+			LOADOBJ = 0x04,
+			STORE = 0x05,
+			STOREOBJ = 0x06, // expects the variable to contain objects ONLY
+			ALOAD = 0x07,
+			ALOADOBJ = 0x08,
+			ASTORE = 0x09,
+			ASTOREOBJ = 0x0A,
+			NEW = 0x0B,
+			NEWARRAY = 0x0C,
+			NEWARRAYPRIM = 0x0D,
+			GETFIELD = 0x0E,
+			PUTFIELD = 0x0F,
+			ADD = 0x10,
+			SUB = 0x11,
+			MUL = 0x12,
+			DIV = 0x13,
+			AND = 0x14,
+			OR = 0x15,
+			XOR = 0x16,
+			SHR = 0x32,
+			SHL = 0x33,
+			INC = 0x17,
+			DEC = 0x18,
+			NOT = 0x19,
+			NEG = 0x1A,
+			CMP = 0x1B,
+			CMP_TRUE = 0x34,
+			CMP_FALSE = 0x35,
+			PUSHEQ = 0x36,
+			PUSHNE = 0x37,
+			PUSHLT = 0x38,
+			PUSHGT = 0x39,
+			PUSHLE = 0x3A,
+			PUSHGE = 0x3B,
+			JMP = 0x1C,
+			JMPREL = 0x1D,
+			JEQ = 0x1E,
+			JEQREL = 0x1F,
+			JNE = 0x20,
+			JNEREL = 0x21,
+			JLT = 0x22,
+			JLTREL = 0x23,
+			JGT = 0x24,
+			JGTREL = 0x25,
+			JLE = 0x26,
+			JLEREL = 0x27,
+			JGE = 0x28,
+			JGEREL = 0x29,
+			CALL = 0x2A,
+			RET = 0x2B,
+			LDC = 0x2C,
+			LDI = 0x2D,
+			LDI_0 = 0x2E,
+			WIDE = 0x2F,
+			DEBUG = 0x30,
+			HLT = 0x31
+		};
+	}
+}
+
+#endif // JESUSASM_OPCODES_H
